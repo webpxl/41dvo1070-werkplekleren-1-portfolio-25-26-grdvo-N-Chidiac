@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>calculator.md</title>
+		<link rel="stylesheet" href="index.css" />
 	</head>
 	<body>
 		<header>
@@ -23,7 +24,7 @@
 		<nav>
 			<ul>
 				<li class="map">Portfolio</li>
-				<li class="md"><a href="./about-me.html">about-me.md</a></li>
+				<li class="md"><a href="./index.html">about-me.md</a></li>
 				<li class="md"><a href="./motivation.html">motivation.md</a></li>
 				<li>projects/</li>
 				<li>school/</li>
@@ -39,55 +40,57 @@
 				<li class="json"><a href="./contact.html">contact.json</a></li>
 			</ul>
 		</nav>
-		<section>
-			<h1>## Calculator App</h1>
-			<p>**Type:** Persoonlijk Project</p>
-			<p>**Jaar:** 2025</p>
-			<p>**Repo:** https://github.com/N-Chidiac/Calculator</p>
-		</section>
-		<section>
-			<h2>### Opdracht in één zin</h2>
+		<main>
+			<section>
+				<h1>## Calculator App</h1>
+				<p>**Type:** Persoonlijk Project</p>
+				<p>**Jaar:** 2025</p>
+				<p>**Repo:** https://github.com/N-Chidiac/Calculator</p>
+			</section>
+			<section>
+				<h2>### Opdracht in één zin</h2>
 
-			<p>
-				Een volledig werkende, mooie calculator bouwen met alleen HTML, CSS en vanilla JavaScript – puur om te bewijzen dat ik de basis van JavaScript
-				écht onder de knie heb.
-			</p>
-		</section>
-		<section>
-			<h2>### Wat ik precies moest doen</h2>
-			<p>
-				Van 0 tot een calculator die alle basisbewerkingen doet (+ − × ÷), decimale getallen, clear (C), delete laatste cijfer (←) en een werkende
-				punt-knop.
-			</p>
-			<img src="./Images/pexels-eye4dtail-374918.jpg" alt="" />
-		</section>
-		<section>
-			<h2>### Mijn aanpak & keuzes</h2>
-			<ul>
-				<li>Drie variabelen: `currentOperand`, `previousOperand`, `operation`</li>
-				<li>Elke knop heeft een `data-` attribute (data-number, data-operation, data-delete, …) → super schoon in de JS</li>
-				<li>Display update via een `updateDisplay()` functie die elke keer opnieuw wordt aangeroepen</li>
-				<li>CSS grid voor het keypad (exact zoals een echte calculator)</li>
-				<li>Subtiele hover/shadow animaties zodat het niet plat aanvoelt</li>
-				<li>Donkere modus-stijl (want ik code altijd in dark mode)</li>
-			</ul>
-		</section>
-		<section>
-			<h2>### Geleerd & trots op</h2>
-			<ul>
-				<li>Voor het eerst zelf een volledige state machine bouwen zonder ergens op te kijken</li>
-				<li>Event delegation onder de knie gekregen (één listener op de hele grid)</li>
-				<li>Fouten afvangen: delen door 0 → “Error”, te lange getallen → netjes afkappen</li>
-				<li>Clean code: geen enkele onnodige comment, alles spreekt voor zich dankzij goede namen</li>
-			</ul>
-			<p>Trots op hoe smooth het werkt – voelt als een echte app terwijl het < 10 KB is.</p>
-		</section>
-		<section>
-			<h2>### Extraatje</h2>
-			<p>
-				Dit was mijn “yes, ik kan het echt”-project. Elke keer als ik op “=” druk en het juiste antwoord verschijnt, weet ik weer waarom ik dit zo graag
-				doe. > “Soms heb je gewoon een projectje nodig dat meteen werkt – dit is dat project.”
-			</p>
-		</section>
+				<p>
+					Een volledig werkende, mooie calculator bouwen met alleen HTML, CSS en vanilla JavaScript – puur om te bewijzen dat ik de basis van
+					JavaScript écht onder de knie heb.
+				</p>
+			</section>
+			<section>
+				<h2>### Wat ik precies moest doen</h2>
+				<p>
+					Van 0 tot een calculator die alle basisbewerkingen doet (+ − × ÷), decimale getallen, clear (C), delete laatste cijfer (←) en een werkende
+					punt-knop.
+				</p>
+				<img src="./Images/pexels-eye4dtail-374918.jpg" alt="" />
+			</section>
+			<section>
+				<h2>### Mijn aanpak & keuzes</h2>
+				<ul>
+					<li>Drie variabelen: `currentOperand`, `previousOperand`, `operation`</li>
+					<li>Elke knop heeft een `data-` attribute (data-number, data-operation, data-delete, …) → super schoon in de JS</li>
+					<li>Display update via een `updateDisplay()` functie die elke keer opnieuw wordt aangeroepen</li>
+					<li>CSS grid voor het keypad (exact zoals een echte calculator)</li>
+					<li>Subtiele hover/shadow animaties zodat het niet plat aanvoelt</li>
+					<li>Donkere modus-stijl (want ik code altijd in dark mode)</li>
+				</ul>
+			</section>
+			<section>
+				<h2>### Geleerd & trots op</h2>
+				<ul>
+					<li>Voor het eerst zelf een volledige state machine bouwen zonder ergens op te kijken</li>
+					<li>Event delegation onder de knie gekregen (één listener op de hele grid)</li>
+					<li>Fouten afvangen: delen door 0 → “Error”, te lange getallen → netjes afkappen</li>
+					<li>Clean code: geen enkele onnodige comment, alles spreekt voor zich dankzij goede namen</li>
+				</ul>
+				<p>Trots op hoe smooth het werkt – voelt als een echte app terwijl het < 10 KB is.</p>
+			</section>
+			<section>
+				<h2>### Extraatje</h2>
+				<p>
+					Dit was mijn “yes, ik kan het echt”-project. Elke keer als ik op “=” druk en het juiste antwoord verschijnt, weet ik weer waarom ik dit zo
+					graag doe. > “Soms heb je gewoon een projectje nodig dat meteen werkt – dit is dat project.”
+				</p>
+			</section>
+		</main>
 	</body>
 </html>
