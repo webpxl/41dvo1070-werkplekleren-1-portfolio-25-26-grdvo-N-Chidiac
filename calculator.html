@@ -56,53 +56,153 @@
 		</nav>
 		<main>
 			<section>
-				<h1>## Calculator App</h1>
-				<p>**Type:** Persoonlijk Project</p>
-				<p>**Jaar:** 2025</p>
-				<p>**Repo:** <a href="https://github.com/N-Chidiac/Calculator" target="_blank">https://github.com/N-Chidiac/Calculator</a></p>
-			</section>
-			<section>
-				<h2>### Opdracht in één zin</h2>
+				<p class="title">
+					<span class="color10">##</span>
+					<span class="color1"> Calculator App</span>
+				</p>
 
 				<p>
-					Een volledig werkende, mooie calculator bouwen met alleen HTML, CSS en vanilla JavaScript – puur om te bewijzen dat ik de basis van
-					JavaScript écht onder de knie heb.
+					<span class="color4">const</span>
+					<span class="color2"> type</span>
+					<span class="color10"> = </span>
+					<span class="color5">"Persoonlijk Project"</span>
+					<span class="color10">;</span>
+				</p>
+
+				<p>
+					<span class="color4">const</span>
+					<span class="color2"> year</span>
+					<span class="color10"> = </span>
+					<span class="color5">"2025"</span>
+					<span class="color10">;</span>
+				</p>
+
+				<p>
+					<span class="color4">const</span>
+					<span class="color2"> repo</span>
+					<span class="color10"> = </span>
+					<span class="color5">
+						"<a href="https://github.com/N-Chidiac/Calculator" target="_blank"> https://github.com/N-Chidiac/Calculator </a>"
+					</span>
+					<span class="color10">;</span>
 				</p>
 			</section>
+
 			<section>
-				<h2>### Wat ik precies moest doen</h2>
-				<p>
-					Van 0 tot een calculator die alle basisbewerkingen doet (+ − × ÷), decimale getallen, clear (C), delete laatste cijfer (←) en een werkende
-					punt-knop.
+				<p class="subtitle">
+					<span class="color10">###</span>
+					<span class="color1"> Opdracht in één zin</span>
 				</p>
+
+				<p>
+					<span class="color10">&gt;</span>
+					<span class="color7">
+						Een volledig werkende, mooie calculator bouwen met alleen HTML, CSS en vanilla JavaScript – puur om te bewijzen dat ik de basis van
+						JavaScript écht onder de knie heb.
+					</span>
+				</p>
+			</section>
+
+			<section>
+				<p class="subtitle">
+					<span class="color10">###</span>
+					<span class="color1"> Wat ik precies moest doen</span>
+				</p>
+
+				<p>
+					<span class="color10">// after-school project</span>
+				</p>
+
+				<p class="facts">
+					<span class="color7">
+						Van 0 tot een calculator die alle basisbewerkingen doet (+ − × ÷), decimale getallen, clear (C), delete laatste cijfer (←) en een
+						werkende punt-knop.
+					</span>
+				</p>
+
 				<img src="./Images/pexels-eye4dtail-374918.jpg" alt="" />
 			</section>
+
 			<section>
-				<h2>### Mijn aanpak & keuzes</h2>
-				<ul>
-					<li>Drie variabelen: `currentOperand`, `previousOperand`, `operation`</li>
-					<li>Elke knop heeft een `data-` attribute (data-number, data-operation, data-delete, …) → super schoon in de JS</li>
-					<li>Display update via een `updateDisplay()` functie die elke keer opnieuw wordt aangeroepen</li>
-					<li>CSS grid voor het keypad (exact zoals een echte calculator)</li>
-					<li>Subtiele hover/shadow animaties zodat het niet plat aanvoelt</li>
-					<li>Donkere modus-stijl (want ik code altijd in dark mode)</li>
-				</ul>
-			</section>
-			<section>
-				<h2>### Geleerd & trots op</h2>
-				<ul>
-					<li>Voor het eerst zelf een volledige state machine bouwen zonder ergens op te kijken</li>
-					<li>Event delegation onder de knie gekregen (één listener op de hele grid)</li>
-					<li>Fouten afvangen: delen door 0 → “Error”, te lange getallen → netjes afkappen</li>
-					<li>Clean code: geen enkele onnodige comment, alles spreekt voor zich dankzij goede namen</li>
-				</ul>
-				<p>Trots op hoe smooth het werkt – voelt als een echte app terwijl het < 10 KB is.</p>
-			</section>
-			<section>
-				<h2>### Extraatje</h2>
+				<p class="subtitle">
+					<span class="color10">###</span>
+					<span class="color1"> Mijn aanpak & keuzes</span>
+				</p>
+
 				<p>
-					Dit was mijn “yes, ik kan het echt”-project. Elke keer als ik op “=” druk en het juiste antwoord verschijnt, weet ik weer waarom ik dit zo
-					graag doe. > “Soms heb je gewoon een projectje nodig dat meteen werkt – dit is dat project.”
+					<span class="color10">// structuur & logica</span>
+				</p>
+
+				<p>
+					<span class="color4">const</span>
+					<span class="color2"> structure</span>
+					<span class="color10"> = </span>
+					<span class="color10">[</span>
+				</p>
+
+				<p class="facts"><span class="color7">"Drie variabelen: currentOperand, previousOperand, operation",</span></p>
+				<p class="facts">
+					<span class="color7">"Elke knop heeft een data- attribute (data-number, data-operation, data-delete, …) → super schoon in de JS",</span>
+				</p>
+				<p class="facts"><span class="color7">"Display update via een updateDisplay() functie die elke keer opnieuw wordt aangeroepen",</span></p>
+				<p class="facts"><span class="color7">"CSS grid voor het keypad (exact zoals een echte calculator)",</span></p>
+				<p class="facts"><span class="color7">"Subtiele hover/shadow animaties zodat het niet plat aanvoelt"</span></p>
+
+				<p>
+					<span class="color10">];</span>
+				</p>
+
+				<p>
+					<span class="color10">&gt;</span>
+					<span class="color7"> Donkere modus-stijl (want ik code altijd in dark mode). </span>
+				</p>
+			</section>
+
+			<section>
+				<p class="subtitle">
+					<span class="color10">###</span>
+					<span class="color1"> Geleerd & trots op</span>
+				</p>
+
+				<p>
+					<span class="color4">const</span>
+					<span class="color2"> learnings</span>
+					<span class="color10"> = </span>
+					<span class="color10">[</span>
+				</p>
+
+				<p class="facts"><span class="color7">"Voor het eerst zelf een volledige state machine bouwen zonder ergens op te kijken",</span></p>
+				<p class="facts"><span class="color7">"Event delegation onder de knie gekregen (één listener op de hele grid)",</span></p>
+				<p class="facts"><span class="color7">"Fouten afvangen: delen door 0 → 'Error', te lange getallen → netjes afkappen",</span></p>
+				<p class="facts"><span class="color7">"Clean code: geen enkele onnodige comment, alles spreekt voor zich dankzij goede namen"</span></p>
+
+				<p>
+					<span class="color10">];</span>
+				</p>
+
+				<p>
+					<span class="color10">// performance</span>
+					<span class="color7"> Trots op hoe smooth het werkt – voelt als een echte app terwijl het < 10 KB is. </span>
+				</p>
+			</section>
+
+			<section>
+				<p class="subtitle">
+					<span class="color10">###</span>
+					<span class="color1"> Extraatje</span>
+				</p>
+
+				<p>
+					<span class="color10">&gt;</span>
+					<span class="color7">
+						Dit was mijn "yes, ik kan het echt"-project. Elke keer als ik op "=" druk en het juiste antwoord verschijnt, weet ik weer waarom ik dit
+						zo graag doe.
+					</span>
+				</p>
+
+				<p>
+					<span class="color10">&gt;</span>
+					<span class="color7"> "Soms heb je gewoon een projectje nodig dat meteen werkt – dit is dat project." </span>
 				</p>
 			</section>
 		</main>
