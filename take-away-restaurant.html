@@ -57,68 +57,146 @@
 		</nav>
 		<main>
 			<section>
-				<h1>## PE Take-Away/Restaurant Website</h1>
-				<p>**Vak:** Project Scripting</p>
-				<p>**Jaar:** 2025-2026</p>
-			</section>
-			<section>
-				<h2>### Opdracht in één zin</h2>
 				<p>
-					Bouw een dynamische take-away/restaurant website met bestelfunctie, gebaseerd op een datastructuur van gerechten, met focus op JavaScript
-					voor interactie, filtering en state management – allemaal zonder frameworks.
+					<span class="color10">##</span>
+					<span class="color1"> PE Take-Away / Restaurant Website</span>
+				</p>
+
+				<p>
+					<span class="color4">const</span>
+					<span class="color2"> course</span>
+					<span class="color10"> = </span>
+					<span class="color5">"Project Scripting"</span>
+					<span class="color10">;</span>
+				</p>
+
+				<p>
+					<span class="color4">const</span>
+					<span class="color2"> year</span>
+					<span class="color10"> = </span>
+					<span class="color5">"2025–2026"</span>
+					<span class="color10">;</span>
 				</p>
 			</section>
+
 			<section>
-				<h1>### Wat ik precies moest doen</h1>
-				<ul>
-					<li>Dynamisch gerechten weergeven vanuit een array/object (later uitgebreid naar JSON via fetch).</li>
-					<li>Veggie-gerechten visueel markeren (bijv. met icoon of badge).</li>
-					<li>Gerecht/promotie van de dag prominent bovenaan tonen.</li>
-					<li>Filteren op veggie/non-veggie.</li>
-					<li>Sorteren op prijs binnen categorieën (laag naar hoog, en optioneel meer sorteeropties).</li>
-					<li>
-						Winkelmandje: knop per gerecht om toe te voegen (met aantallen, geen duplicaten), opslaan in localStorage, max. aantal per gerecht
-						afdwingen met melding.
-					</li>
-					<li>Knop voor winkelmand-view: toon inhoud + totaalprijs.</li>
-					<li>GitHub Classroom gebruiken met dagelijkse commits, correcte naming conventions, en README.md.</li>
-				</ul>
+				<p>
+					<span class="color10">###</span>
+					<span class="color1"> Opdracht in één zin</span>
+				</p>
+
+				<p>
+					<span class="color10">&gt;</span>
+					<span class="color7">
+						Bouw een dynamische take-away/restaurant website met bestelfunctie, datastructuur van gerechten en JavaScript voor interactie, filtering
+						en state — zonder frameworks.
+					</span>
+				</p>
+			</section>
+
+			<section>
+				<p>
+					<span class="color10">###</span>
+					<span class="color1"> Wat ik precies moest doen</span>
+				</p>
+
+				<p>
+					<span class="color4">const</span>
+					<span class="color2"> requirements</span>
+					<span class="color10"> = </span>
+					<span class="color10">[</span>
+				</p>
+
+				<p class="facts"><span class="color7">"dynamisch renderen vanuit array/object",</span></p>
+				<p class="facts"><span class="color7">"later uitbreiden naar JSON via fetch",</span></p>
+				<p class="facts"><span class="color7">"veggie-gerechten visueel markeren",</span></p>
+				<p class="facts"><span class="color7">"gerecht/promotie van de dag",</span></p>
+				<p class="facts"><span class="color7">"filter veggie / non-veggie",</span></p>
+				<p class="facts"><span class="color7">"sorteren op prijs per categorie",</span></p>
+				<p class="facts"><span class="color7">"winkelmandje met localStorage",</span></p>
+				<p class="facts"><span class="color7">"max. aantal + foutmelding",</span></p>
+				<p class="facts"><span class="color7">"cart view met totaalprijs",</span></p>
+				<p class="facts"><span class="color7">"GitHub Classroom + README"</span></p>
+
+				<p>
+					<span class="color10">];</span>
+				</p>
+
 				<img src="./Images/pexels-rahulp9800-1933900.jpg" alt="" />
 			</section>
+
 			<section>
-				<h2>### Mijn aanpak & keuzes</h2>
 				<p>
-					Ik koos voor een clean, gebruiksvriendelijke UI: een grid-layout voor gerechten, met filters en sortering via dropdowns. Alles in vanilla JS
-					– loops voor rendering, event listeners voor toevoegen/filteren, en localStorage voor persistence. Voor uitbreidingen: JSON fetchen voor
-					data, admin-login met potlood-icoon om dagpromotie te editen (autofill van bestaande gerechten), promocodes met validatie en one-time use,
-					contactform met client-side validatie (geen alerts, inline errors), aparte checkout-pagina met totaalprijs en korting, en extra/omit-opties
-					per gerecht met dynamische prijsherberekening.
+					<span class="color10">###</span>
+					<span class="color1"> Mijn aanpak & keuzes</span>
 				</p>
+
 				<p>
-					Waarom deze keuzes? Mijn achtergrond in customer service (bij Kwantum en Telenet) leerde me dat gebruiksvriendelijkheid key is – dus focus
-					op intuïtieve interacties en foutmeldingen die niet irriteren (looking at you Telenet 👀). Als developer-in-opleiding wou ik laten zien dat
-					ik state kan managen zonder libs, net zoals ik vroeger muren perfect strak schilderde: laag per laag opbouwen tot het klopt.
+					<span class="color10">// UI & architectuur</span>
+				</p>
+
+				<p class="facts">
+					<span class="color7">
+						grid-layout voor gerechten, dropdowns voor filter & sortering, vanilla JS voor rendering, event listeners voor interactie, localStorage
+						voor persistence
+					</span>
+				</p>
+
+				<p>
+					<span class="color10">&gt;</span>
+					<span class="color7">
+						Mijn customer service-achtergrond leerde me dat UX alles is: duidelijke feedback, geen irritante alerts, en state managen zonder
+						libraries.
+					</span>
 				</p>
 			</section>
+
 			<section>
-				<h2>### Geleerd & trots op</h2>
-				<ul>
-					<li>Beheersing van JS basics: arrays/objects manipuleren, DOM-updates zonder reloads, en error handling.</li>
-					<li>Fetch API voor async data laden – mijn eerste echte JSON-integratie.</li>
-					<li>Complexe features zoals admin-mode en dynamische pricing stabiel maken.</li>
-					<li>Clean code: beschrijvende namen (geen comments), consistente structuur, en Git-flow met merges (geen squash).</li>
-				</ul>
-				<p>Trots op de checkout-pagina: visueel aantrekkelijk met totaaloverzicht, korting en opties – voelt als een echte app.</p>
-			</section>
-			<section>
-				<h2>### Extraatje</h2>
 				<p>
-					Deze PE was mijn eerste "echte" webapp – van statische HTML naar interactief met state. Het toont hoe ik van probleemoplosser in
-					klantendienst naar builder in code ben gegaan.
+					<span class="color10">###</span>
+					<span class="color1"> Geleerd & trots op</span>
 				</p>
+
 				<p>
-					Link naar repository:
-					<a href="https://github.com/webpxl/pe-scripting-2526-N-Chidiac">https://github.com/webpxl/pe-scripting-2526-N-Chidiac</a>
+					<span class="color4">const</span>
+					<span class="color2"> achievements</span>
+					<span class="color10"> = </span>
+					<span class="color10">[</span>
+				</p>
+
+				<p class="facts"><span class="color7">"JS arrays & objects manipuleren",</span></p>
+				<p class="facts"><span class="color7">"DOM updates zonder reload",</span></p>
+				<p class="facts"><span class="color7">"Fetch API & JSON integratie",</span></p>
+				<p class="facts"><span class="color7">"admin-mode & dynamische pricing",</span></p>
+				<p class="facts"><span class="color7">"clean code & Git flow"</span></p>
+
+				<p>
+					<span class="color10">];</span>
+				</p>
+
+				<p>
+					<span class="color10">// note</span>
+					<span class="color7"> Checkout-pagina voelt als een echte app </span>
+				</p>
+			</section>
+
+			<section>
+				<p>
+					<span class="color10">###</span>
+					<span class="color1"> Extraatje</span>
+				</p>
+
+				<p>
+					<span class="color10">&gt;</span>
+					<span class="color7"> Mijn eerste echte webapp: van statisch naar state-driven. </span>
+				</p>
+
+				<p>
+					<span class="color4">const</span>
+					<span class="color2"> repository</span>
+					<span class="color10"> = </span>
+					<span class="color5"> "<a href="https://github.com/webpxl/pe-scripting-2526-N-Chidiac" target="_blank"> GitHub Repo </a>" </span>
+					<span class="color10">;</span>
 				</p>
 			</section>
 		</main>

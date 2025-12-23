@@ -324,7 +324,22 @@ p {
 	color: #53b9fe;
 	padding-left: 15px;
 }
+
+.code-container .color4 {
+	margin: 0;
+	padding: 0;
+}
 .color5 {
+	color: #c3624d;
+}
+
+.color5 a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.color5 a:hover {
+	text-decoration: underline;
 	color: #c3624d;
 }
 .color6 {
@@ -340,8 +355,16 @@ p {
 	color: #67ada8;
 }
 
+.color10 {
+	color: #757575;
+}
+
 .facts {
 	padding-left: 30px;
+}
+
+.contact .color1 {
+	padding-left: 25px;
 }
 
 /* Links */
