@@ -354,7 +354,7 @@ img {
 	object-fit: cover;
 	border-radius: 8px;
 	margin: 20px auto;
-	opacity: 0.4;
+	/* opacity: 0.4; */
 }
 
 /* Hero Image */
