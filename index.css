@@ -314,6 +314,9 @@ p {
 .color10 {
 	color: var(--color-operator);
 } /* Operators, punctuation */
+.color11 {
+	color: var(--color-function);
+}
 
 .facts {
 	padding-left: 30px;
@@ -345,12 +348,12 @@ a:hover {
 
 /* Images */
 img {
-	max-width: 100%;
-	height: auto;
+	width: 100%;
+	max-height: 500px;
+	object-fit: cover;
 	border-radius: 8px;
-	margin: 20px 0;
-	opacity: 0.8;
-	display: block;
+	margin: 20px auto;
+	opacity: 0.4;
 }
 
 /* Hero Image */
@@ -358,6 +361,7 @@ img {
 	width: 100%;
 	max-width: 400px;
 	height: auto;
+	opacity: 1;
 }
 
 /* Code Container */
