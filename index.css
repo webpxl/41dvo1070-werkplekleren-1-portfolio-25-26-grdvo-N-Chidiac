@@ -466,6 +466,18 @@ article:last-child {
 }
 
 @media (max-width: 768px) {
+	nav {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 250px;
+		height: 100%;
+		transform: translateX(-100%);
+		transition: transform 0.3s ease;
+		z-index: 1000;
+		overflow-y: auto;
+	}
 	body {
 		grid-template-columns: 48px 1fr;
 		grid-template-areas:
