@@ -115,6 +115,36 @@ class MobileMenu {
             body.menu-open {
                 overflow: hidden;
             }
+
+            /* Easter Egg Badge */
+            .secret-badge {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: var(--bg-secondary);
+                color: var(--text-primary);
+                padding: 10px 20px;
+                border-radius: 5px;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                z-index: 1002;
+                white-space: nowrap;
+                font-size: 14px;
+                max-width: 90vw;
+                text-align: center;
+            }
+
+            .secret-badge.show {
+                opacity: 1;
+            }
+
+            @media (max-width: 768px) {
+                .secret-badge {
+                    font-size: 12px;
+                    padding: 8px 16px;
+                }
+            }
         `;
 		document.head.appendChild(style);
 	}
@@ -139,7 +169,7 @@ class MobileMenu {
 
 		const nav = document.querySelector("nav");
 		if (nav && this.isOpen && window.innerWidth <= 768) {
-			nav.style.display = "block"; // Safety override when opening
+			nav.style.display = "block";
 		}
 	}
 
@@ -165,7 +195,7 @@ class MobileMenu {
 				nav.style.transition = "transform 0.3s ease";
 				nav.style.zIndex = "1000";
 				nav.style.overflowY = "auto";
-				nav.style.display = "block"; // Key fix: override display:none from CSS
+				nav.style.display = "block";
 			}
 			this.hamburger.style.display = "flex";
 		} else {
@@ -178,7 +208,7 @@ class MobileMenu {
 				nav.style.transform = "";
 				nav.style.transition = "";
 				nav.style.zIndex = "";
-				nav.style.display = ""; // Reset to let CSS handle it
+				nav.style.display = "";
 			}
 			this.hamburger.style.display = "none";
 			this.close();
@@ -186,18 +216,15 @@ class MobileMenu {
 	}
 
 	addKeyboardSupport() {
-		// Shortcuts: M for menu, N for navigation
 		let keySequence = [];
 		const konamiCode = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
 
 		document.addEventListener("keydown", (e) => {
-			// Menu shortcut (Alt + M)
 			if (e.altKey && e.key === "m") {
 				e.preventDefault();
 				this.toggle();
 			}
 
-			// Konami code easter egg
 			keySequence.push(e.key);
 			if (keySequence.length > konamiCode.length) {
 				keySequence.shift();
@@ -211,7 +238,6 @@ class MobileMenu {
 	}
 
 	addEasterEgg() {
-		// Click counter easter egg
 		let clickCount = 0;
 		const logo = document.querySelector(".file-name");
 
@@ -224,7 +250,6 @@ class MobileMenu {
 					clickCount = 0;
 				}
 
-				// Visual feedback
 				logo.style.transform = "scale(1.1)";
 				setTimeout(() => {
 					logo.style.transform = "scale(1)";
@@ -234,7 +259,6 @@ class MobileMenu {
 	}
 
 	activateEasterEgg() {
-		// Show secret badge
 		const badge = document.createElement("div");
 		badge.className = "secret-badge";
 		badge.textContent = "🎉 You found the secret! Keep coding!";
@@ -242,7 +266,6 @@ class MobileMenu {
 
 		setTimeout(() => badge.classList.add("show"), 100);
 
-		// Rainbow effect on nav
 		const nav = document.querySelector("nav");
 		const colors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#FFA07A", "#98D8C8", "#F7DC6F", "#BB8FCE"];
 		let colorIndex = 0;
@@ -254,7 +277,6 @@ class MobileMenu {
 			}
 		}, 200);
 
-		// Remove after 5 seconds
 		setTimeout(() => {
 			badge.classList.remove("show");
 			clearInterval(rainbowInterval);
@@ -263,7 +285,6 @@ class MobileMenu {
 			setTimeout(() => badge.remove(), 500);
 		}, 5000);
 
-		// Console message
 		console.log(
 			`
 %c 🎨 EASTER EGG UNLOCKED! 🎨
@@ -281,7 +302,6 @@ Keep exploring and happy coding! 💻
 	}
 }
 
-// Initialize when DOM is ready
 if (document.readyState === "loading") {
 	document.addEventListener("DOMContentLoaded", () => {
 		new MobileMenu();
@@ -290,7 +310,6 @@ if (document.readyState === "loading") {
 	new MobileMenu();
 }
 
-// Bonus: Add smooth scroll behavior
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 	anchor.addEventListener("click", function (e) {
 		const href = this.getAttribute("href");
@@ -303,7 +322,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 	});
 });
 
-// Performance: Add loading indicator
 window.addEventListener("load", () => {
 	document.body.style.opacity = "0";
 	document.body.style.transition = "opacity 0.3s ease";
