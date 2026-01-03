@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>calculator.md</title>
+		<meta name="description" content="Volledig functionele calculator app gebouwd met vanilla JavaScript." />
+		<meta name="keywords" content="calculator, JavaScript, webontwikkeling, project" />
+		<meta name="author" content="Nour Chidiac" />
+		<title>Calculator App Project | Nour Chidiac</title>
 		<link rel="stylesheet" href="index.css" />
+		<link rel="icon" type="image/png" href="./Images/favicon-32x32.png" />
 		<script src="menu.js"></script>
 	</head>
 	<body>
+		<!-- ============================================
+		     HEADER - Bestandsnaam en statusbalk
+		     ============================================ -->
 		<header>
 			<div class="file-name"><p>calculator.md</p></div>
 			<div class="blue-bg">
@@ -16,26 +23,34 @@
 				</p>
 			</div>
 		</header>
+
+		<!-- ============================================
+		     SIDEBAR - VS Code stijl iconen
+		     ============================================ -->
 		<aside>
 			<div class="files">
-				<img src="./Images/files-svgrepo-com.png" alt="Files" />
+				<img src="./Images/files-svgrepo-com.png" alt="Bestanden verkenner icoon" />
 			</div>
 			<div>
-				<img src="./Images/magnifying-glass-.png" alt="Search" />
+				<img src="./Images/magnifying-glass-.png" alt="Zoek icoon" />
 			</div>
 			<div>
-				<img src="./Images/source-control-svgrepo-com.png" alt="Source Control" />
+				<img src="./Images/source-control-svgrepo-com.png" alt="Bronbeheer icoon" />
 			</div>
 			<div>
-				<img src="./Images/run-and-debug.png" alt="Run and Debug" />
+				<img src="./Images/run-and-debug.png" alt="Uitvoeren en debuggen icoon" />
 			</div>
 			<div>
-				<img src="./Images/extenstions.svg" alt="Extensions" />
+				<img src="./Images/extenstions.svg" alt="Extensies icoon" />
 			</div>
 			<div>
-				<img src="./Images/chats.png" alt="Chat" />
+				<img src="./Images/chats.png" alt="Chat icoon" />
 			</div>
 		</aside>
+
+		<!-- ============================================
+		     NAVIGATIE - Bestandsboom structuur
+		     ============================================ -->
 		<nav>
 			<ul>
 				<li class="map">Portfolio</li>
@@ -55,7 +70,12 @@
 				<li class="json"><a href="./contact.html">contact.json</a></li>
 			</ul>
 		</nav>
+
+		<!-- ============================================
+		     HOOFDINHOUD - Calculator Project pagina
+		     ============================================ -->
 		<main>
+			<!-- Project Info -->
 			<section>
 				<p class="title">
 					<span class="color10">##</span>
@@ -83,12 +103,15 @@
 					<span class="color2"> repo</span>
 					<span class="color10"> = </span>
 					<span class="color5">
-						"<a href="https://github.com/N-Chidiac/Calculator" target="_blank"> https://github.com/N-Chidiac/Calculator </a>"
+						"<a href="https://github.com/N-Chidiac/Calculator" target="_blank" rel="noopener noreferrer">
+							https://github.com/N-Chidiac/Calculator </a
+						>"
 					</span>
 					<span class="color10">;</span>
 				</p>
 			</section>
 
+			<!-- Opdracht Sectie -->
 			<section>
 				<p class="subtitle">
 					<span class="color10">###</span>
@@ -104,6 +127,7 @@
 				</p>
 			</section>
 
+			<!-- Wat Moest Ik Doen Sectie -->
 			<section>
 				<p class="subtitle">
 					<span class="color10">###</span>
@@ -121,9 +145,14 @@
 					</span>
 				</p>
 
-				<img src="./Images/calculator.png" alt="foto van calculator" />
+				<!-- Calculator screenshot -->
+				<img
+					src="./Images/calculator.png"
+					alt="Screenshot van donker thema calculator app met grid layout met nummerknoppen, operatie knoppen en digitaal display"
+					loading="lazy" />
 			</section>
 
+			<!-- Aanpak Sectie -->
 			<section>
 				<p class="subtitle">
 					<span class="color10">###</span>
@@ -148,6 +177,7 @@
 				<p class="facts"><span class="color5">"Display update via een updateDisplay() functie die elke keer opnieuw wordt aangeroepen",</span></p>
 				<p class="facts"><span class="color5">"CSS grid voor het keypad (exact zoals een echte calculator)",</span></p>
 				<p class="facts"><span class="color5">"Subtiele hover/shadow animaties zodat het niet plat aanvoelt"</span></p>
+
 				<p>
 					<span class="color10">];</span>
 				</p>
@@ -158,6 +188,7 @@
 				</p>
 			</section>
 
+			<!-- Geleerd Sectie -->
 			<section>
 				<p class="subtitle">
 					<span class="color10">###</span>
@@ -185,6 +216,7 @@
 				</p>
 			</section>
 
+			<!-- Extra Sectie -->
 			<section>
 				<p class="subtitle">
 					<span class="color10">###</span>

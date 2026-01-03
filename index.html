@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>about-me.md</title>
+		<meta
+			name="description"
+			content="Nour Chidiac - DVO Student & aspirant Front-end Developer. Portfolio met webontwikkelingsprojecten en vaardigheden." />
+		<meta name="keywords" content="Nour Chidiac, portfolio, webontwikkeling, front-end developer, HTML, CSS, JavaScript, DVO" />
+		<meta name="author" content="Nour Chidiac" />
+		<title>Nour Chidiac - Over Mij | Front-end Developer Portfolio</title>
 		<link rel="stylesheet" href="index.css" />
+		<link rel="icon" type="image/png" href="./Images/favicon-32x32.png" />
 		<script src="menu.js"></script>
 	</head>
 	<body>
+		<!-- ============================================
+		     HEADER - Bestandsnaam en statusbalk
+		     ============================================ -->
 		<header>
 			<div class="file-name"><p>about-me.md</p></div>
 			<div class="blue-bg">
@@ -16,26 +25,34 @@
 				</p>
 			</div>
 		</header>
+
+		<!-- ============================================
+		     SIDEBAR - VS Code stijl iconen
+		     ============================================ -->
 		<aside>
 			<div class="files">
-				<img src="./Images/files-svgrepo-com.png" alt="Files" />
+				<img src="./Images/files-svgrepo-com.png" alt="Bestanden verkenner icoon" />
 			</div>
 			<div>
-				<img src="./Images/magnifying-glass-.png" alt="Search" />
+				<img src="./Images/magnifying-glass-.png" alt="Zoek icoon" />
 			</div>
 			<div>
-				<img src="./Images/source-control-svgrepo-com.png" alt="Source Control" />
+				<img src="./Images/source-control-svgrepo-com.png" alt="Bronbeheer icoon" />
 			</div>
 			<div>
-				<img src="./Images/run-and-debug.png" alt="Run and Debug" />
+				<img src="./Images/run-and-debug.png" alt="Uitvoeren en debuggen icoon" />
 			</div>
 			<div>
-				<img src="./Images/extenstions.svg" alt="Extensions" />
+				<img src="./Images/extenstions.svg" alt="Extensies icoon" />
 			</div>
 			<div>
-				<img src="./Images/chats.png" alt="Chat" />
+				<img src="./Images/chats.png" alt="Chat icoon" />
 			</div>
 		</aside>
+
+		<!-- ============================================
+		     NAVIGATIE - Bestandsboom structuur
+		     ============================================ -->
 		<nav>
 			<ul>
 				<li class="map">Portfolio</li>
@@ -55,7 +72,12 @@
 				<li class="json"><a href="./contact.html">contact.json</a></li>
 			</ul>
 		</nav>
+
+		<!-- ============================================
+		     HOOFDINHOUD - Over mij pagina
+		     ============================================ -->
 		<main>
+			<!-- Pagina Titel -->
 			<p class="title">
 				<span class="color10">##</span>
 				<span class="color1"> Hello world!</span>
@@ -66,35 +88,43 @@
 				<span class="color7"> Mijn naam is Nour Chidiac.</span>
 			</p>
 
+			<!-- Markdown stijl afbeelding referentie -->
 			<p>
 				<span class="color10">![</span>
 				<span class="color4">profile-image</span>
 				<span class="color10">]</span>
 			</p>
 
+			<!-- Profielfoto -->
 			<img
 				src="./Images/136945551_3488287457964137_6036631626144390227_n.jpg"
 				class="hero-img"
-				alt="Portretillustratie van Nour Chidiac, gemaakt door losing_focus_photography_" />
+				alt="Portret van Nour Chidiac - professionele zwart-wit hoofdfoto met vastberaden uitdrukking" />
+
+			<!-- Fotocredit Commentaar -->
 			<p>
 				<span class="color8">/*</span>
 				<span class="color9">
-					Profile image captured by
-					<a href="https://www.instagram.com/losing_focus_photography_/" target="_blank"> @losing_focus_photography_ </a>
+					Profielfoto gemaakt door
+					<a href="https://www.instagram.com/losing_focus_photography_/" target="_blank" rel="noopener noreferrer"> @losing_focus_photography_ </a>
 				</span>
 				<span class="color8">*/</span>
 			</p>
 
+			<!-- Fotograaf Variabele -->
 			<p>
 				<span class="color4">const</span>
 				<span class="color2"> photographer</span>
 				<span class="color10"> = </span>
-				<span class="color5"> "<a href="https://www.instagram.com/losing_focus_photography_/" target="_blank"> losing_focus_photography_ </a>" </span>
+				<span class="color5">
+					"<a href="https://www.instagram.com/losing_focus_photography_/" target="_blank" rel="noopener noreferrer"> losing_focus_photography_ </a>"
+				</span>
 				<span class="color10">;</span>
 			</p>
 			<br />
 			<br />
 
+			<!-- Achtergrond Sectie -->
 			<p>
 				<span class="color10">-</span>
 				<span class="color3"> background:</span>
@@ -108,6 +138,7 @@
 				</span>
 			</p>
 
+			<!-- Huidig Pad -->
 			<p>
 				<span class="color4">const</span>
 				<span class="color2"> currentPath</span>
@@ -124,6 +155,7 @@
 				</span>
 			</p>
 
+			<!-- Waarden Sectie -->
 			<p>
 				<span class="color10">-</span>
 				<span class="color3"> values:</span>
@@ -133,6 +165,7 @@
 				<span class="color7"> kunst, mensen, dieren (vooral honden), creativiteit, organisatievermogen, leren & groeien </span>
 			</p>
 
+			<!-- Reis Commentaar -->
 			<p>
 				<span class="color8">/*</span>
 				<span class="color9"> van penseel → administratie → code → digitale creaties </span>

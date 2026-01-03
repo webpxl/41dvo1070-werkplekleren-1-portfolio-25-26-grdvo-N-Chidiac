@@ -1,42 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Informatie over mijn portfolio website project - VS Code geïnspireerd ontwerp gebouwd met HTML, CSS en JavaScript." />
+		<meta name="keywords" content="portfolio website, HTML, CSS, JavaScript, VS Code, webontwikkeling" />
+		<meta name="author" content="Nour Chidiac" />
 		<link rel="stylesheet" href="index.css" />
+		<link rel="icon" type="image/png" href="./Images/favicon-32x32.png" />
 		<script src="menu.js"></script>
-		<title>portfolio-website.md</title>
+		<title>Portfolio Website Project | Nour Chidiac</title>
 	</head>
 	<body>
+		<!-- ============================================
+		     HEADER - Bestandsnaam en statusbalk
+		     ============================================ -->
 		<header>
 			<div class="file-name"><p>portfolio-website.md</p></div>
-
 			<div class="blue-bg">
 				<p>
 					main . 0 errors <span><a href="./privacy.html">Privacy</a></span> Ln1, Col1
 				</p>
 			</div>
 		</header>
+
+		<!-- ============================================
+		     SIDEBAR - VS Code stijl iconen
+		     ============================================ -->
 		<aside>
 			<div class="files">
-				<img src="./Images/files-svgrepo-com.png" alt="Files" />
+				<img src="./Images/files-svgrepo-com.png" alt="Bestanden verkenner icoon" />
 			</div>
 			<div>
-				<img src="./Images/magnifying-glass-.png" alt="Search" />
+				<img src="./Images/magnifying-glass-.png" alt="Zoek icoon" />
 			</div>
 			<div>
-				<img src="./Images/source-control-svgrepo-com.png" alt="Source Control" />
+				<img src="./Images/source-control-svgrepo-com.png" alt="Bronbeheer icoon" />
 			</div>
 			<div>
-				<img src="./Images/run-and-debug.png" alt="Run and Debug" />
+				<img src="./Images/run-and-debug.png" alt="Uitvoeren en debuggen icoon" />
 			</div>
 			<div>
-				<img src="./Images/extenstions.svg" alt="Extensions" />
+				<img src="./Images/extenstions.svg" alt="Extensies icoon" />
 			</div>
 			<div>
-				<img src="./Images/chats.png" alt="Chat" />
+				<img src="./Images/chats.png" alt="Chat icoon" />
 			</div>
 		</aside>
+
+		<!-- ============================================
+		     NAVIGATIE - Bestandsboom structuur
+		     ============================================ -->
 		<nav>
 			<ul>
 				<li class="map">Portfolio</li>
@@ -56,7 +70,12 @@
 				<li class="json"><a href="./contact.html">contact.json</a></li>
 			</ul>
 		</nav>
+
+		<!-- ============================================
+		     HOOFDINHOUD - Portfolio Website Project pagina
+		     ============================================ -->
 		<main>
+			<!-- Project Info -->
 			<article>
 				<p class="title">
 					<span class="color10">##</span>
@@ -77,7 +96,7 @@
 					<span class="color4">const</span>
 					<span class="color2"> year</span>
 					<span class="color10"> = </span>
-					<span class="color5">"2025–2026"</span>
+					<span class="color5">"2025—2026"</span>
 					<span class="color10">;</span>
 				</p>
 
@@ -85,10 +104,14 @@
 					<span class="color4">const</span>
 					<span class="color2"> liveDemo</span>
 					<span class="color10"> = </span>
-					<span class="color5"> "<a href="https://nourchidiac.netlify.app/" target="_blank"> https://nourchidiac.netlify.app/ </a>" </span>
+					<span class="color5">
+						"<a href="https://nourchidiac.netlify.app/" target="_blank" rel="noopener noreferrer"> https://nourchidiac.netlify.app/ </a>"
+					</span>
 					<span class="color10">;</span>
 				</p>
 			</article>
+
+			<!-- Opdracht Sectie -->
 			<article>
 				<p class="subtitle">
 					<span class="color10">###</span>
@@ -98,10 +121,12 @@
 				<p>
 					<span class="color10">&gt;</span>
 					<span class="color7">
-						Bouw een volledig functioneel, responsive portfolio met alleen HTML, CSS en plain JavaScript — en wees vooral creatief.
+						Bouw een volledig functioneel, responsive portfolio met alleen HTML, CSS en plain JavaScript – en wees vooral creatief.
 					</span>
 				</p>
 			</article>
+
+			<!-- Wat Moest Ik Doen Sectie -->
 			<article>
 				<p class="subtitle">
 					<span class="color10">###</span>
@@ -109,6 +134,7 @@
 				</p>
 
 				<p>Een persoonlijke website maken met minstens:</p>
+
 				<p>
 					<span class="color4">const</span>
 					<span class="color2"> requirements</span>
@@ -130,8 +156,14 @@
 					<span class="color10">];</span>
 				</p>
 
-				<img src="./Images/portfolio-website.png" alt="foto van home pagina van portfolio website" />
+				<!-- Portfolio website screenshot - NO lazy loading for main project image -->
+				<img
+					src="./Images/portfolio-website.png"
+					alt="Screenshot van portfolio website homepage met VS Code geïnspireerd ontwerp, sidebar, bestandsnavigatie en syntax-highlighted inhoud"
+					class="portfolio-img" />
 			</article>
+
+			<!-- Aanpak Sectie -->
 			<article>
 				<p class="subtitle">
 					<span class="color10">###</span>
@@ -148,9 +180,11 @@
 
 				<p>
 					<span class="color10">&gt;</span>
-					<span class="color7"> Ik wil niet alleen ontwerpen — ik wil laten zien dat ik kan bouwen. </span>
+					<span class="color7"> Ik wil niet alleen ontwerpen – ik wil laten zien dat ik kan bouwen. </span>
 				</p>
 			</article>
+
+			<!-- Geleerd Sectie -->
 			<article>
 				<p class="subtitle">
 					<span class="color10">###</span>
@@ -173,6 +207,8 @@
 					<span class="color10">];</span>
 				</p>
 			</article>
+
+			<!-- Extra Sectie -->
 			<article>
 				<p class="subtitle">
 					<span class="color10">###</span>
@@ -190,7 +226,12 @@
 					<span class="color2"> repository</span>
 					<span class="color10"> = </span>
 					<span class="color5">
-						"<a href="https://github.com/webpxl/41dvo1070-werkplekleren-1-portfolio-25-26-grdvo-N-Chidiac"> GitHub Repo </a>"
+						"<a
+							href="https://github.com/webpxl/41dvo1070-werkplekleren-1-portfolio-25-26-grdvo-N-Chidiac"
+							target="_blank"
+							rel="noopener noreferrer">
+							GitHub Repo </a
+						>"
 					</span>
 					<span class="color10">;</span>
 				</p>

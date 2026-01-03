@@ -1,6 +1,15 @@
+/* ============================================
+   PORTFOLIO WEBSITE - NOUR CHIDIAC
+   VS Code inspired portfolio with dark/light theme
+   ============================================ */
+
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
 
+/* ============================================
+   CSS VARIABLES - DARK THEME (DEFAULT)
+   ============================================ */
 :root {
+	/* Color Palette - Dark Theme */
 	--bg-primary: #1e1e1e;
 	--bg-secondary: #252526;
 	--bg-tertiary: #2d2d30;
@@ -10,24 +19,65 @@
 	--accent-blue: #007acc;
 	--accent-blue-hover: #1177bb;
 
-	--color-keyword: #569cd6; /* const, let, function */
-	--color-variable: #9cdcfe; /* variable names */
-	--color-string: #ce9178; /* strings */
-	--color-number: #b5cea8; /* numbers */
-	--color-comment: #6a9955; /* comments */
-	--color-property: #9cdcfe; /* object properties */
-	--color-function: #dcdcaa; /* function names */
-	--color-operator: #d4d4d4; /* operators */
-	--color-punctuation: #d4d4d4; /* brackets, semicolons */
-	--color-class: #4ec9b0; /* class names */
-	--color-header: #569cd6; /* markdown headers */
+	/* Syntax Highlighting Colors */
+	--color-keyword: #569cd6;
+	--color-variable: #9cdcfe;
+	--color-string: #ce9178;
+	--color-number: #b5cea8;
+	--color-comment: #6a9955;
+	--color-property: #9cdcfe;
+	--color-function: #dcdcaa;
+	--color-operator: #d4d4d4;
+	--color-punctuation: #d4d4d4;
+	--color-class: #4ec9b0;
+	--color-header: #569cd6;
 }
+
+/* ============================================
+   LIGHT THEME VARIABLES
+   ============================================ */
+[data-theme="light"] {
+	/* Color Palette - Light Theme */
+	--bg-primary: #ffffff;
+	--bg-secondary: #f3f3f3;
+	--bg-tertiary: #e8e8e8;
+	--border: #d4d4d4;
+	--text-primary: #1e1e1e;
+	--text-secondary: #6a6a6a;
+	--accent-blue: #007acc;
+	--accent-blue-hover: #005a9e;
+
+	/* Syntax Highlighting Colors - Light Theme */
+	--color-keyword: #0000ff;
+	--color-variable: #001080;
+	--color-string: #a31515;
+	--color-number: #098658;
+	--color-comment: #008000;
+	--color-property: #001080;
+	--color-function: #795e26;
+	--color-operator: #000000;
+	--color-punctuation: #000000;
+	--color-class: #267f99;
+	--color-header: #0000ff;
+}
+
+/* ============================================
+   GLOBAL RESET
+   ============================================ */
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* ============================================
+   BODY & LAYOUT GRID
+   ============================================ */
 
 body {
 	font-family: "Fira Code", monospace;
@@ -44,7 +94,9 @@ body {
 	line-height: 1.5;
 }
 
-/* Header */
+/* ============================================
+   HEADER SECTION
+   ============================================ */
 header {
 	grid-area: header;
 	background-color: var(--bg-secondary);
@@ -53,6 +105,7 @@ header {
 	align-items: center;
 	border-bottom: 1px solid var(--border);
 	font-size: 13px;
+	gap: 5px;
 }
 
 header p {
@@ -75,19 +128,31 @@ header a:hover {
 	padding: 5px 20px;
 	border-right: 1px solid var(--border);
 	color: var(--text-primary);
+	display: flex;
+	align-items: center;
+	min-width: 0;
+}
+
+.file-name p {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .blue-bg {
 	background-color: var(--accent-blue);
 	padding: 5px 20px;
 	color: white;
+	flex-shrink: 0;
 }
 
 .blue-bg a {
 	color: white;
 }
 
-/* Sidebar */
+/* ============================================
+   SIDEBAR NAVIGATION
+   ============================================ */
 aside {
 	grid-area: aside;
 	background-color: var(--bg-secondary);
@@ -117,7 +182,9 @@ aside img:hover {
 	opacity: 1;
 }
 
-/* Navigation */
+/* ============================================
+   FILE TREE NAVIGATION
+   ============================================ */
 nav {
 	grid-area: nav;
 	background-color: var(--bg-secondary);
@@ -141,7 +208,26 @@ nav li {
 	color: var(--text-secondary);
 }
 
-nav li:hover {
+nav li a:hover {
+	color: var(--accent-blue);
+}
+
+nav li a {
+	color: inherit;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	color: var(--accent-blue);
+}
+
+/* Active page styling */
+nav li a.active {
+	color: var(--accent-blue);
+	background-color: var(--bg-primary);
+}
+
+nav li:has(a.active) {
 	background-color: var(--bg-primary);
 }
 
@@ -158,16 +244,6 @@ nav li.map:hover {
 	background-color: transparent;
 }
 
-nav li a {
-	color: inherit;
-	text-decoration: none;
-}
-
-nav li a:hover {
-	color: var(--accent-blue);
-}
-
-/* File icons */
 nav li::before {
 	content: "";
 	display: inline-block;
@@ -200,7 +276,6 @@ nav li.html::before {
 	background-image: url("./Images/html.png");
 }
 
-/* Tree indentation */
 nav li:nth-child(1) {
 	padding-left: 8px;
 }
@@ -233,7 +308,20 @@ nav li:nth-child(15) {
 	padding-left: 24px;
 }
 
-/* Main Content */
+/* Mobile nav spacing */
+@media (max-width: 768px) {
+	nav.mobile-open {
+		padding-top: 60px;
+	}
+
+	nav ul {
+		padding-bottom: 20px;
+	}
+}
+
+/* ============================================
+   MAIN CONTENT AREA
+   ============================================ */
 main {
 	grid-area: main;
 	background-color: var(--bg-primary);
@@ -242,7 +330,6 @@ main {
 	line-height: 1.7;
 }
 
-/* Scrollbars */
 nav::-webkit-scrollbar,
 main::-webkit-scrollbar {
 	width: 10px;
@@ -264,7 +351,9 @@ main::-webkit-scrollbar-thumb:hover {
 	background: #555;
 }
 
-/* Typography */
+/* ============================================
+   TYPOGRAPHY STYLES
+   ============================================ */
 .title {
 	font-size: 40px;
 	margin-bottom: 20px;
@@ -284,37 +373,39 @@ p {
 	line-height: 1.8;
 }
 
-/* Syntax Colors */
+/* ============================================
+   SYNTAX HIGHLIGHTING COLORS
+   ============================================ */
 .color1 {
 	color: var(--color-header);
-} /* Headers, types */
+}
 .color2 {
 	color: var(--color-variable);
-} /* Variables */
+}
 .color3 {
 	color: var(--color-punctuation);
-} /* Brackets - JSON */
+}
 .color4 {
 	color: var(--color-keyword);
-} /* Keywords */
+}
 .color5 {
 	color: var(--color-string);
-} /* Strings */
+}
 .color6 {
 	color: var(--color-comment);
-} /* Comments */
+}
 .color7 {
 	color: var(--text-primary);
-} /* Regular text */
+}
 .color8 {
 	color: var(--color-comment);
-} /* Block comments */
+}
 .color9 {
 	color: var(--color-comment);
-} /* Comment content */
+}
 .color10 {
 	color: var(--color-operator);
-} /* Operators, punctuation */
+}
 .color11 {
 	color: var(--color-function);
 }
@@ -327,7 +418,6 @@ p {
 	padding-left: 25px;
 }
 
-/* Links */
 a {
 	color: var(--accent-blue);
 	text-decoration: none;
@@ -347,17 +437,18 @@ a:hover {
 	text-decoration: underline;
 }
 
-/* Images */
-img {
+/* ============================================
+   IMAGES
+   ============================================ */
+img,
+.portfolio-img {
 	width: 100%;
 	max-height: 500px;
 	object-fit: cover;
 	border-radius: 8px;
 	margin: 20px auto;
-	/* opacity: 0.4; */
 }
 
-/* Hero Image */
 .hero-img {
 	width: 100%;
 	max-width: 400px;
@@ -365,7 +456,19 @@ img {
 	opacity: 1;
 }
 
-/* Code Container */
+/* Banner-style image for motivation page - keeps full width but reduces height */
+article img {
+	max-height: 250px;
+	width: 100%;
+	object-fit: cover;
+}
+
+/* Keep portfolio website images at normal size */
+.portfolio-img {
+	max-height: 500px;
+	max-width: 100%;
+}
+
 .code-container {
 	background-color: var(--bg-secondary);
 	border: 1px solid var(--border);
@@ -384,7 +487,9 @@ code {
 	line-height: 1.6;
 }
 
-/* Timeline */
+/* ============================================
+   TIMELINE COMPONENT
+   ============================================ */
 .timeline {
 	position: relative;
 	padding-left: 30px;
@@ -410,20 +515,17 @@ code {
 	border: 2px solid var(--bg-primary);
 }
 
-/* Selection */
 ::selection {
 	background-color: var(--accent-blue);
 	color: white;
 }
 
-/* Focus */
 a:focus,
 button:focus {
 	outline: 2px solid var(--accent-blue);
 	outline-offset: 2px;
 }
 
-/* Article Spacing */
 article {
 	margin-bottom: 40px;
 }
@@ -432,7 +534,9 @@ article:last-child {
 	margin-bottom: 0;
 }
 
-/* Responsive */
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
 @media (max-width: 1200px) {
 	.hero-img {
 		max-width: 350px;
@@ -481,6 +585,25 @@ article:last-child {
 		padding: 20px;
 	}
 
+	header {
+		flex-direction: column;
+		height: auto;
+		padding: 5px 0;
+	}
+
+	.file-name {
+		width: 100%;
+		border-right: none;
+		border-bottom: 1px solid var(--border);
+		padding: 5px 10px;
+	}
+
+	.blue-bg {
+		width: 100%;
+		padding: 5px 10px;
+		font-size: 11px;
+	}
+
 	.title {
 		font-size: 28px;
 	}
@@ -501,7 +624,7 @@ article:last-child {
 @media (max-width: 480px) {
 	body {
 		grid-template-columns: 1fr;
-		grid-template-rows: 35px 1fr;
+		grid-template-rows: auto 1fr;
 		grid-template-areas:
 			"header"
 			"main";
@@ -512,13 +635,38 @@ article:last-child {
 	}
 
 	header {
-		padding: 0 10px;
+		padding: 0;
+		flex-direction: row;
+		flex-wrap: wrap;
+		height: auto;
+		align-items: stretch;
 	}
 
-	.file-name,
+	.file-name {
+		flex: 1;
+		min-width: 0;
+		padding: 8px 5px;
+		font-size: 12px;
+		border-bottom: none;
+		border-right: none;
+	}
+
+	.file-name p {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
 	.blue-bg {
+		width: 100%;
 		padding: 5px 10px;
-		font-size: 11px;
+		font-size: 10px;
+		order: 3;
+		text-align: center;
+	}
+
+	.blue-bg p {
+		font-size: 10px;
 	}
 
 	main {
@@ -551,7 +699,6 @@ article:last-child {
 	}
 }
 
-/* Small mobile devices */
 @media (max-width: 360px) {
 	.title {
 		font-size: 20px;
@@ -568,4 +715,145 @@ article:last-child {
 	.hero-img {
 		max-width: 180px;
 	}
+
+	.file-name {
+		padding: 8px 3px;
+		font-size: 11px;
+	}
+
+	.blue-bg {
+		font-size: 9px;
+		padding: 5px 8px;
+	}
+
+	.blue-bg p {
+		font-size: 9px;
+	}
+}
+
+/* ============================================
+   THEME TOGGLE BUTTON
+   ============================================ */
+.theme-toggle {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: var(--accent-blue);
+	border: 2px solid var(--border);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle:hover {
+	transform: scale(1.1);
+	background: var(--accent-blue-hover);
+}
+
+.theme-toggle svg {
+	width: 24px;
+	height: 24px;
+	fill: white;
+}
+
+.theme-toggle .sun-icon {
+	display: none;
+}
+
+[data-theme="light"] .theme-toggle .sun-icon {
+	display: block;
+}
+
+[data-theme="light"] .theme-toggle .moon-icon {
+	display: none;
+}
+
+aside img {
+	filter: invert(1);
+}
+
+[data-theme="light"] aside img {
+	filter: none;
+	transition: filter 0.3s ease;
+}
+
+@media (max-width: 768px) {
+	.theme-toggle {
+		width: 45px;
+		height: 45px;
+		bottom: 15px;
+		right: 15px;
+	}
+
+	.theme-toggle svg {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.theme-toggle {
+		width: 40px;
+		height: 40px;
+		bottom: 10px;
+		right: 10px;
+	}
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+	aside,
+	nav,
+	.hamburger,
+	.blue-bg,
+	.theme-toggle,
+	.menu-overlay {
+		display: none !important;
+	}
+
+	body {
+		grid-template-columns: 1fr;
+		grid-template-areas: "main";
+		background: white;
+		color: black;
+	}
+
+	main {
+		padding: 20px;
+	}
+
+	a {
+		color: #000;
+		text-decoration: underline;
+	}
+
+	img {
+		max-width: 100%;
+		page-break-inside: avoid;
+	}
+}
+
+/* ============================================
+   ACCESSIBILITY - FOCUS INDICATORS
+   ============================================ */
+*:focus-visible {
+	outline: 2px solid var(--accent-blue);
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
+/* ============================================
+   SMOOTH SCROLLING
+   ============================================ */
+html {
+	scroll-behavior: smooth;
 }
