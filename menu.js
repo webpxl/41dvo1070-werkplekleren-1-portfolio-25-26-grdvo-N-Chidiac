@@ -205,6 +205,9 @@ class MobileMenu {
                 .secret-badge {
                     font-size: 12px;
                     padding: 8px 16px;
+					bottom: 80px;
+					left: 50%;
+					transform: translateX(-50%);
                 }
             }
 
