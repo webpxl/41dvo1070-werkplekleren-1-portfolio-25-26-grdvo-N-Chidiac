@@ -322,6 +322,7 @@ class MobileMenu {
 	addEasterEgg() {
 		let clickCount = 0;
 		const logo = document.querySelector(".file-name");
+		logo.style.cursor = "pointer";
 
 		if (logo) {
 			logo.addEventListener("click", () => {

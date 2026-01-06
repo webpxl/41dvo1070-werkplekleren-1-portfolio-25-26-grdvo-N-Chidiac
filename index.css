@@ -599,6 +599,7 @@ article:last-child {
 		border-right: none;
 		border-bottom: 1px solid var(--border);
 		padding: 5px 10px;
+		cursor: pointer;
 	}
 
 	.blue-bg {
