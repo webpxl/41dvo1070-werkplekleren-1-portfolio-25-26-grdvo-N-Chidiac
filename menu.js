@@ -24,17 +24,21 @@ class MobileMenu {
 	}
 
 	setActivePage() {
-		const currentPath = window.location.pathname.replace(/^\/|\.html$/g, "") || "index";
+		const currentPath = window.location.pathname.toLowerCase();
 		const links = document.querySelectorAll("nav a");
 
 		links.forEach((link) => {
-			const linkHref = link.getAttribute("href").replace("./", "").replace(".html", "");
+			let linkHref = link.getAttribute("href").toLowerCase().replace("./", "");
 
 			link.classList.remove("active");
 			const li = link.closest("li");
 			if (li) li.classList.remove("active");
 
-			if (currentPath === linkHref) {
+			const isHomePage = (currentPath === "/" || currentPath.endsWith("index.html") || currentPath === "") && linkHref.includes("index");
+			const isOtherPage =
+				(linkHref !== "index.html" && linkHref !== "" && currentPath.endsWith(linkHref.replace(".html", ""))) || currentPath.endsWith(linkHref);
+
+			if (isHomePage || isOtherPage) {
 				link.classList.add("active");
 				if (li) li.classList.add("active");
 			}
