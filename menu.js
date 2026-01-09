@@ -24,23 +24,22 @@ class MobileMenu {
 	}
 
 	setActivePage() {
-		const currentPath = window.location.pathname;
+		const currentPath = window.location.pathname.replace(/^\/|\.html$/g, "") || "index";
 		const links = document.querySelectorAll("nav a");
 
 		links.forEach((link) => {
-			const linkHref = link.getAttribute("href");
+			const linkHref = link.getAttribute("href").replace("./", "").replace(".html", "");
 
-			const cleanHref = linkHref.replace("./", "").replace(".html", "");
-			const cleanPath = currentPath.replace("/", "").replace(".html", "");
+			link.classList.remove("active");
+			const li = link.closest("li");
+			if (li) li.classList.remove("active");
 
-			if ((cleanPath === "" && cleanHref === "index") || cleanPath === cleanHref || (currentPath.includes(cleanHref) && cleanHref !== "")) {
+			if (currentPath === linkHref) {
 				link.classList.add("active");
-				const li = link.closest("li");
 				if (li) li.classList.add("active");
 			}
 		});
 	}
-
 	createHamburger() {
 		const hamburger = document.createElement("div");
 		hamburger.className = "hamburger";
