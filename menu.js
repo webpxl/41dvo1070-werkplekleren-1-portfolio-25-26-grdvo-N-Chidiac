@@ -5,6 +5,7 @@ class MobileMenu {
 	}
 
 	init() {
+		this.loadTheme();
 		this.createHamburger();
 		this.createOverlay();
 		this.createThemeToggle();
@@ -15,6 +16,13 @@ class MobileMenu {
 		this.setActivePage();
 	}
 
+	loadTheme() {
+		const savedTheme = localStorage.getItem("theme");
+		if (savedTheme) {
+			document.documentElement.setAttribute("data-theme", savedTheme);
+		}
+	}
+
 	setActivePage() {
 		const currentPage = window.location.pathname.split("/").pop() || "index.html";
 		const links = document.querySelectorAll("nav a");
@@ -22,6 +30,9 @@ class MobileMenu {
 			const linkPage = link.getAttribute("href");
 			if (linkPage === `./${currentPage}` || linkPage === currentPage) {
 				link.classList.add("active");
+
+				const li = link.closest("li");
+				if (li) li.classList.add("active");
 			}
 		});
 	}
@@ -208,7 +219,10 @@ class MobileMenu {
 		this.hamburger.addEventListener("click", () => this.toggle());
 		this.overlay.addEventListener("click", () => this.close());
 		this.themeToggle.addEventListener("click", () => {
-			document.documentElement.setAttribute("data-theme", document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light");
+			const newTheme = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+
+			document.documentElement.setAttribute("data-theme", newTheme);
+			localStorage.setItem("theme", newTheme);
 		});
 
 		window.addEventListener("resize", () => this.handleResize());
@@ -238,11 +252,12 @@ class MobileMenu {
 		document.body.classList.add("menu-open");
 		document.body.style.overflow = "hidden";
 
-		this.hamburger.style.position = "absolute";
-		this.hamburger.style.left = "10px";
-		this.hamburger.style.top = "10px";
-		this.hamburger.style.zIndex = "1001";
-		this.hamburger.style.margin = "0";
+		// this.hamburger.style.position = "absolute";
+		// this.hamburger.style.left = "10px";
+		// this.hamburger.style.top = "10px";
+		// this.hamburger.style.zIndex = "1001";
+		// this.hamburger.style.margin = "0";
+		this.hamburger.classList.add("floating");
 	}
 
 	close() {
@@ -255,11 +270,7 @@ class MobileMenu {
 		document.body.classList.remove("menu-open");
 		document.body.style.overflow = "";
 
-		this.hamburger.style.position = "";
-		this.hamburger.style.left = "";
-		this.hamburger.style.top = "";
-		this.hamburger.style.zIndex = "";
-		this.hamburger.style.margin = "";
+		this.hamburger.classList.remove("floating");
 	}
 
 	toggle() {
